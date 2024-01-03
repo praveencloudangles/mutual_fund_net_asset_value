@@ -30,14 +30,14 @@ def data_vis():
         fig.write_image(f"{i}.jpg")
         # a.append(fig)
 
-    for i in col:
-        fig = px.histogram(data, y=i, marginal="box")
-        fig.update_layout(template='plotly_dark')
-        fig.update_xaxes(showgrid=False, zeroline=False)
-        fig.update_yaxes(showgrid=False, zeroline=False)
-        # fig.show()
-        fig.write_image(f"{i}_hist.jpg")
-        # a.append(fig)
+    # for i in col:
+    #     fig = px.histogram(data, y=i, marginal="box")
+    #     fig.update_layout(template='plotly_dark')
+    #     fig.update_xaxes(showgrid=False, zeroline=False)
+    #     fig.update_yaxes(showgrid=False, zeroline=False)
+    #     # fig.show()
+    #     fig.write_image(f"{i}_hist.jpg")
+    #     # a.append(fig)
 
     df=data.drop("net_asset_value",axis=1)
     y=df.corr().columns.tolist()
