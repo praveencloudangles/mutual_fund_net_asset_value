@@ -12,7 +12,7 @@ def feat_eng():
     for col in columns_to_encode:
         data[col] = label_encoder.fit_transform(data[col])
 
-    data.to_csv("mutual_fund_net_value.csv")
+    data.to_csv("mutual_fund_net_value.csv", index=False)
 
     return data
 
